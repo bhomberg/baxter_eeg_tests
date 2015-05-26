@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package>
+  <name>eeg_tests</name>
+  <version>0.0.0</version>
+  <description>Package for eeg tests</description>
+  <maintainer email="bhomberg@mit.edu">bhomberg</maintainer>
+  <license>TODO</license>
+  <!-- <url type="website">http://wiki.ros.org/gripper_tests</url> -->
+  <author email="bhomberg@mit.edu">Bianca Homberg</author>
+
+
+  <!--<build_depend>message_generation</build_depend>-->
+  <!-- Use buildtool_depend for build tool packages: -->
+  <!--  <buildtool_depend>catkin</buildtool_depend> -->
+  <!-- Use run_depend for packages you need at runtime: -->
+  <!--<run_depend>message_runtime</run_depend>-->
+  <run_depend>rospy</run_depend>
+  <!-- Use test_depend for packages you need only for testing: -->
+  <!--   <test_depend>gtest</test_depend> -->
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+
+
+  <export>
+
+  </export>
+</package>

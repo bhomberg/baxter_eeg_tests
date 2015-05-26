@@ -1,0 +1,8 @@
+<launch>
+ <!-- <node pkg="rosserial_python" type="serial_node.py" name="rosserial_arduino" output="screen">
+  	<param name="~port" value="/dev/ttyACM2" />
+	<param name="~baud" value="57600" />
+  </node> -->
+  <node name="main_control" pkg="eeg_tests" type="main_control.py" output="screen"/>
+  <node name="keyboard_input" pkg="eeg_tests" type="keyboard_input.py" output="screen"/>
+</launch>
