@@ -169,7 +169,7 @@ def run_experiment(num_trials, args):
                 error = int(error.encode('hex'))
             except:
                 error = 0
-		        print "HEX reading error"
+		print "HEX reading error"
                 rospy.loginfo("HEX reading error")
             print "error: ", error
             if error == 1 and not switched:
