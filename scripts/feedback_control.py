@@ -169,9 +169,11 @@ def run_experiment(num_trials, args):
                 error = int(error.encode('hex'))
             except:
                 error = 0
-		print "HEX reading error"
+		        print "HEX reading error"
+                rospy.loginfo("HEX reading error")
             print "error: ", error
             if error == 1 and not switched:
+                rospy.loginfo("Got 1 signal!")
                 selected = 1 - selected
                 if selected == 0:
                     ser.write('1 61 ') # new target is left
