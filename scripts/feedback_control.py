@@ -168,10 +168,10 @@ def run_experiment(num_trials, args):
             rospy.loginfo('sent 231')
             time.sleep(.1)
         else:
-            ser.write('1 222') # right target
+            ser.write('1 222 ') # right target (was 222)
             rospy.loginfo('sent 222')
             time.sleep(.1)
-            ser.write('1 232') # right target
+            ser.write('1 232 ') # right target (was 232)
             rospy.loginfo('sent 232')
             time.sleep(.1)
         if correct == selected:
