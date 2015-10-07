@@ -20,13 +20,7 @@ from trajectory_msgs.msg import (
 # communicates to EEG-reading computer
 ser = serial.Serial("/dev/ttyACM2", 9600, timeout=1)
 
-def run_experiment(num_trials, args):
-    print "received message"
-    arduino_pub = args[0]
-    baxter_limb = args[1]
-    gripper = args[2]
-    pub = args[3]
-    traj = args[4]
+def run_experiment(num_trials, arduino_pub, baxter_limb, gripper, pub, traj):
 
     ser.write('1 111 ') # need to send 1 before any of the EEG outputs to tell the arduino what type of message it is # send 111 three times to signal start of experiment
     rospy.loginfo('sent 111')
@@ -52,7 +46,7 @@ def run_experiment(num_trials, args):
 
     time.sleep(3)
 
-    for i in range(num_trials.data):
+    for i in range(num_trials):
         print "starting trial"
         ser.write('1 90 ') # indicate start of trial
         rospy.loginfo('sent 90')
@@ -293,7 +287,7 @@ if __name__ == '__main__':
             st = raw_input("Enter number of trials: ")
             try:
                 num_trials = int(st)
-                rospy.loginfo("Number of trials: " + num_trials)
+                rospy.loginfo("Number of trials: " + str(num_trials))
                 st = raw_input("Enter block name: ")
                 rospy.loginfo("block name: " + st)
                 run_experiment(num_trials, arduino_pub, baxter_limb, gripper, pub, traj)
