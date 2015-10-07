@@ -28,45 +28,6 @@ def run_experiment(num_trials, args):
     pub = args[3]
     traj = args[4]
 
-    '''if num_trials.data == 1:
-        traj.stop()
-        traj.clear('left')
-        traj.add_point(p, 2.0)
-        traj.start()
-        time.sleep(1)
-        #if num_trials.data == 2:
-        traj.stop()
-        traj.clear('left')
-        traj.add_point(p2, 2.0)
-        traj.start()
-    if num_trials.data == 3:
-        print traj.result()'''
-
-    '''selected = 0
-    switched = False
-
-    for i in range(20):
-        time.sleep(.1)
-        ser.write('2')  # tell arduino to respond with the input from the EEG
-        error = ser.read() # read one byte -- should be sufficient for reading in the 0/1 message
-        error = int(error.encode('hex'))
-        print error
-        if error == 1 and not switched:
-            print "GOTCHA!"
-            switched = True
-            selected = 1 - selected
-            #traj.stop()
-            #traj.clear('left')
-            #traj.add_point(down[selected], 1.0)
-            if selected == 0:
-                ser.write('1 61 ') # new target is left
-            else:
-                ser.write('1 62 ') # new target is right
-
-    if not switched:
-        ser.write('1 60 ') # target unchanged'''
-
-
     ser.write('1 111 ') # need to send 1 before any of the EEG outputs to tell the arduino what type of message it is # send 111 three times to signal start of experiment
     rospy.loginfo('sent 111')
     time.sleep(.1)
@@ -136,7 +97,7 @@ def run_experiment(num_trials, args):
             ser.write('1 202 ')
             rospy.loginfo('sent 202')
         time.sleep(1)
-        
+
         # set light to go on for one second
         # 0 -- turn on light 0
         # 1 -- turn on light 1
@@ -149,7 +110,7 @@ def run_experiment(num_trials, args):
         time.sleep(.6) # wait 1s
         ser.write('0')
         ser.write('0')#turn off lights
-        
+
         time.sleep(.75 + random.random()*.5-.25) # wait 1s
 
 
@@ -158,7 +119,7 @@ def run_experiment(num_trials, args):
         down = [[-.86, .22, -.25, .47, -.04, -.59, .20], [-.72, .29, .67, .27, -.08, -.44, -.48]]
         up = [-.80, .16, .09, .43, -.14, -.61, -.03]
         wait = [-.75, -.21, -.07, 1.84, .05, -1.57, .04]
-        
+
         print "send baxter to move"
         if selected == 0:
             ser.write('1 221 ') # left target
@@ -208,9 +169,11 @@ def run_experiment(num_trials, args):
                 error = int(error.encode('hex'))
             except:
                 error = 0
-		print "HEX reading error"
+		        print "HEX reading error"
+                rospy.loginfo("HEX reading error")
             print "error: ", error
             if error == 1 and not switched:
+                rospy.loginfo("Got 1 signal!")
                 selected = 1 - selected
                 if selected == 0:
                     ser.write('1 61 ') # new target is left
@@ -249,11 +212,11 @@ def run_experiment(num_trials, args):
         traj.add_point(up, 2.0)
         traj.start()
         time.sleep(1) # give Baxter 4 seconds to get there
-            
+
         ser.write('1 91 ') # trial end
         rospy.loginfo('sent 91')
         time.sleep(.1)
-        
+
     ser.write('1 100 ') # indicate end of session
     rospy.loginfo('sent 100')
 
@@ -321,11 +284,23 @@ if __name__ == '__main__':
         gripper.calibrate()
         pub = rospy.Publisher("eeg_output", Int32)
         traj = Trajectory('left')
-        rospy.Subscriber("command", Int32, run_experiment, callback_args=(arduino_pub, baxter_limb, gripper, pub, traj))
+        rate = rospy.Rate(10) # 10hz
 
-        
-        print "started main node"
-        rospy.spin()
+        st = raw_input("Enter subject name: ")
+        rospy.loginfo("Subject: " + st)
+
+        while not rospy.is_shutdown():
+            st = raw_input("Enter number of trials: ")
+            try:
+                num_trials = int(st)
+                rospy.loginfo("Number of trials: " + num_trials)
+                st = raw_input("Enter block name: ")
+                rospy.loginfo("block name: " + st)
+                run_experiment(num_trials, arduino_pub, baxter_limb, gripper, pub, traj)
+            except ValueError:
+                pass
+            rate.sleep()
+        #rospy.Subscriber("command", Int32, run_experiment, callback_args=(arduino_pub, baxter_limb, gripper, pub, traj))
 
     except rospy.ROSInterruptException:
         pass
