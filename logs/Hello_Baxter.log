@@ -1,0 +1,157 @@
+[rospy.client][INFO] 2014-10-06 10:21:09,917: init_node, name[/Hello_Baxter], pid[32982]
+[xmlrpc][INFO] 2014-10-06 10:21:09,918: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2014-10-06 10:21:09,918: Started XML-RPC server [http://169.254.10.2:50365/]
+[rospy.init][INFO] 2014-10-06 10:21:09,918: ROS Slave URI: [http://169.254.10.2:50365/]
+[rospy.impl.masterslave][INFO] 2014-10-06 10:21:09,918: _ready: http://169.254.10.2:50365/
+[xmlrpc][INFO] 2014-10-06 10:21:09,919: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2014-10-06 10:21:09,920: Registering with master node http://drl-baxter:11311
+[rospy.init][INFO] 2014-10-06 10:21:10,019: registered with master
+[rospy.rosout][INFO] 2014-10-06 10:21:10,019: initializing /rosout core topic
+[rospy.rosout][INFO] 2014-10-06 10:21:10,022: connected to core topic /rosout
+[rospy.simtime][INFO] 2014-10-06 10:21:10,023: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2014-10-06 10:21:10,247: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2014-10-06 10:21:18,688: topic[/robot/joint_states] adding connection to [http://drl-baxter:58978/], count 0
+[rospy.internal][INFO] 2014-10-06 10:21:23,605: topic[/robot/limb/right/endpoint_state] adding connection to [http://drl-baxter:58978/], count 0
+[rospy.internal][INFO] 2014-10-06 10:21:23,868: topic[/robot/limb/right/joint_command_timeout] adding connection to [/realtime_loop], count 0
+[rospy.internal][INFO] 2014-10-06 10:21:23,868: topic[/robot/limb/right/joint_command] adding connection to [/realtime_loop], count 0
+[rospy.internal][INFO] 2014-10-06 10:21:23,868: topic[/robot/limb/right/set_speed_ratio] adding connection to [/realtime_loop], count 0
+[rospy.core][INFO] 2014-10-06 10:24:11,467: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2014-10-06 10:24:11,475: topic[/robot/limb/right/joint_command_timeout] removing connection to /realtime_loop
+[rospy.internal][INFO] 2014-10-06 10:24:11,475: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2014-10-06 10:24:11,475: topic[/robot/limb/right/set_speed_ratio] removing connection to /realtime_loop
+[rospy.internal][INFO] 2014-10-06 10:24:11,475: topic[/robot/limb/right/joint_command] removing connection to /realtime_loop
+[rospy.internal][INFO] 2014-10-06 10:24:11,476: topic[/robot/joint_states] removing connection to http://drl-baxter:58978/
+[rospy.internal][INFO] 2014-10-06 10:24:11,476: topic[/robot/limb/right/endpoint_state] removing connection to http://drl-baxter:58978/
+[rospy.impl.masterslave][INFO] 2014-10-06 10:24:11,476: signal-2
+[rospy.core][INFO] 2014-10-06 10:27:45,411: signal_shutdown [signal-2]
+[rospy.core][INFO] 2014-10-06 10:27:46,699: signal_shutdown [signal-2]
+[rospy.core][INFO] 2014-10-06 18:55:17,757: signal_shutdown [atexit]
+[rospy.client][INFO] 2015-05-26 12:52:37,210: init_node, name[/Hello_Baxter], pid[9564]
+[xmlrpc][INFO] 2015-05-26 12:52:37,237: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2015-05-26 12:52:37,238: Started XML-RPC server [http://169.254.10.2:33499/]
+[rospy.init][INFO] 2015-05-26 12:52:37,238: ROS Slave URI: [http://169.254.10.2:33499/]
+[rospy.impl.masterslave][INFO] 2015-05-26 12:52:37,238: _ready: http://169.254.10.2:33499/
+[xmlrpc][INFO] 2015-05-26 12:52:37,239: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2015-05-26 12:52:37,239: Registering with master node http://drl-baxter.local:11311
+[rospy.init][INFO] 2015-05-26 12:52:37,338: registered with master
+[rospy.rosout][INFO] 2015-05-26 12:52:37,338: initializing /rosout core topic
+[rospy.rosout][INFO] 2015-05-26 12:52:37,341: connected to core topic /rosout
+[rospy.simtime][INFO] 2015-05-26 12:52:37,344: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2015-05-26 12:52:37,601: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.registration][ERROR] 2015-05-26 12:56:20,886: [Errno -2] Name or service not known
+Unable to register with master node [http://drl-baxter.local:11311]: master may not be running yet. Will keep trying.
+[rospy.internal][INFO] 2015-05-26 12:56:33,083: topic[/robot/joint_states] adding connection to [http://drl-baxter.local:60973/], count 0
+[rospy.internal][INFO] 2015-05-26 12:56:33,084: topic[/robot/limb/left/endpoint_state] adding connection to [http://drl-baxter.local:60973/], count 0
+[rospy.internal][INFO] 2015-05-26 12:56:33,288: topic[/robot/limb/left/set_speed_ratio] adding connection to [/realtime_loop], count 0
+[rospy.internal][INFO] 2015-05-26 12:56:33,288: topic[/robot/limb/left/joint_command] adding connection to [/realtime_loop], count 0
+[rospy.internal][INFO] 2015-05-26 12:56:33,289: topic[/robot/limb/left/joint_command_timeout] adding connection to [/realtime_loop], count 0
+[rospy.internal][ERROR] 2015-05-26 13:06:32,480: Unable to initiate TCP/IP socket to drl-baxter.local:32823 (http://drl-baxter.local:60973/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 580, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+TransportInitError: remote error reported: received a connection for a nonexistent topic [/robot/limb/left/endpoint_state] from [TCPROS connection on port 32823 to [169.254.10.2:45150 on socket 18]] [/Hello_Baxter].
+
+[rospy.internal][ERROR] 2015-05-26 13:06:32,481: Unable to initiate TCP/IP socket to drl-baxter.local:32823 (http://drl-baxter.local:60973/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 580, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+TransportInitError: remote error reported: received a connection for a nonexistent topic [/robot/joint_states] from [TCPROS connection on port 32823 to [169.254.10.2:45151 on socket 18]] [/Hello_Baxter].
+
+[rospy.internal][WARNING] 2015-05-26 13:06:33,482: Unknown error initiating TCP/IP socket to drl-baxter.local:32823 (http://drl-baxter.local:60973/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 555, in connect
+    self.socket.connect((dest_addr, dest_port))
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 111] Connection refused
+
+[rospy.internal][INFO] 2015-05-26 13:06:33,483: topic[/robot/joint_states] removing connection to http://drl-baxter.local:60973/
+[rospy.internal][WARNING] 2015-05-26 13:06:33,483: Unknown error initiating TCP/IP socket to drl-baxter.local:32823 (http://drl-baxter.local:60973/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 555, in connect
+    self.socket.connect((dest_addr, dest_port))
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 111] Connection refused
+
+[rospy.internal][INFO] 2015-05-26 13:06:33,483: topic[/robot/limb/left/endpoint_state] removing connection to http://drl-baxter.local:60973/
+[rospy.core][INFO] 2015-05-26 16:25:21,880: signal_shutdown [atexit]
+[rospy.core][INFO] 2015-05-26 16:25:24,332: signal_shutdown [signal-2]
+[rospy.registration][WARNING] 2015-05-26 16:25:24,333: unclean shutdown
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/registration.py", line 372, in cleanup
+    multi()
+  File "/usr/lib/python2.7/xmlrpclib.py", line 997, in __call__
+    return MultiCallIterator(self.__server.system.multicall(marshalled_list))
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1224, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1578, in __request
+    verbose=self.__verbose
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1264, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1292, in single_request
+    self.send_content(h, request_body)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1439, in send_content
+    connection.endheaders(request_body)
+  File "/usr/lib/python2.7/httplib.py", line 969, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python2.7/httplib.py", line 829, in _send_output
+    self.send(msg)
+  File "/usr/lib/python2.7/httplib.py", line 791, in send
+    self.connect()
+  File "/usr/lib/python2.7/httplib.py", line 772, in connect
+    self.timeout, self.source_address)
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+gaierror: [Errno -2] Name or service not known
+
+[rospy.internal][INFO] 2015-05-26 16:25:24,333: topic[/robot/limb/left/joint_command] removing connection to /realtime_loop
+[rospy.internal][INFO] 2015-05-26 16:25:24,334: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2015-05-26 16:25:24,334: topic[/robot/limb/left/set_speed_ratio] removing connection to /realtime_loop
+[rospy.internal][INFO] 2015-05-26 16:25:24,334: topic[/robot/limb/left/joint_command_timeout] removing connection to /realtime_loop
+[rospy.impl.masterslave][INFO] 2015-05-26 16:25:24,334: atexit
+[rospy.client][INFO] 2015-12-17 15:37:31,469: init_node, name[/Hello_Baxter], pid[3051]
+[xmlrpc][INFO] 2015-12-17 15:37:31,484: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2015-12-17 15:37:31,484: Started XML-RPC server [http://169.254.10.2:51872/]
+[rospy.init][INFO] 2015-12-17 15:37:31,484: ROS Slave URI: [http://169.254.10.2:51872/]
+[rospy.impl.masterslave][INFO] 2015-12-17 15:37:31,485: _ready: http://169.254.10.2:51872/
+[xmlrpc][INFO] 2015-12-17 15:37:31,485: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2015-12-17 15:37:31,486: Registering with master node http://drl-baxter.local:11311
+[rospy.init][INFO] 2015-12-17 15:37:31,585: registered with master
+[rospy.rosout][INFO] 2015-12-17 15:37:31,585: initializing /rosout core topic
+[rospy.rosout][INFO] 2015-12-17 15:37:31,689: connected to core topic /rosout
+[rospy.simtime][INFO] 2015-12-17 15:37:31,692: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2015-12-17 15:37:31,958: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.core][INFO] 2015-12-17 15:37:41,083: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2015-12-17 15:37:41,087: topic[/rosout] removing connection to /rosout
+[rospy.impl.masterslave][INFO] 2015-12-17 15:37:41,087: signal-2
+[rospy.core][INFO] 2015-12-17 15:38:02,980: signal_shutdown [atexit]
+[rospy.client][INFO] 2015-12-17 15:38:09,634: init_node, name[/Hello_Baxter], pid[3062]
+[xmlrpc][INFO] 2015-12-17 15:38:09,634: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2015-12-17 15:38:09,634: Started XML-RPC server [http://169.254.10.2:56997/]
+[rospy.init][INFO] 2015-12-17 15:38:09,634: ROS Slave URI: [http://169.254.10.2:56997/]
+[rospy.impl.masterslave][INFO] 2015-12-17 15:38:09,635: _ready: http://169.254.10.2:56997/
+[xmlrpc][INFO] 2015-12-17 15:38:09,635: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2015-12-17 15:38:09,636: Registering with master node http://drl-baxter.local:11311
+[rospy.init][INFO] 2015-12-17 15:38:09,735: registered with master
+[rospy.rosout][INFO] 2015-12-17 15:38:09,735: initializing /rosout core topic
+[rospy.rosout][INFO] 2015-12-17 15:38:09,738: connected to core topic /rosout
+[rospy.simtime][INFO] 2015-12-17 15:38:09,740: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2015-12-17 15:38:09,947: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2015-12-17 15:38:13,606: topic[/robot/limb/left/endpoint_state] adding connection to [http://drl-baxter.local:44739/], count 0
+[rospy.internal][INFO] 2015-12-17 15:38:13,606: topic[/robot/joint_states] adding connection to [http://drl-baxter.local:44739/], count 0
+[rospy.internal][INFO] 2015-12-17 15:38:13,708: topic[/robot/limb/left/set_speed_ratio] adding connection to [/realtime_loop], count 0
+[rospy.internal][INFO] 2015-12-17 15:38:13,709: topic[/robot/limb/left/joint_command] adding connection to [/realtime_loop], count 0
+[rospy.internal][INFO] 2015-12-17 15:38:13,709: topic[/robot/limb/left/joint_command_timeout] adding connection to [/realtime_loop], count 0
+[rospy.core][INFO] 2015-12-17 17:44:32,790: signal_shutdown [atexit]
+[rospy.internal][INFO] 2015-12-17 17:44:32,795: topic[/robot/limb/left/joint_command] removing connection to /realtime_loop
+[rospy.internal][INFO] 2015-12-17 17:44:32,796: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2015-12-17 17:44:32,796: topic[/robot/limb/left/set_speed_ratio] removing connection to /realtime_loop
+[rospy.internal][INFO] 2015-12-17 17:44:32,796: topic[/robot/limb/left/joint_command_timeout] removing connection to /realtime_loop
+[rospy.internal][INFO] 2015-12-17 17:44:32,796: topic[/robot/joint_states] removing connection to http://drl-baxter.local:44739/
+[rospy.internal][INFO] 2015-12-17 17:44:32,796: topic[/robot/limb/left/endpoint_state] removing connection to http://drl-baxter.local:44739/
+[rospy.impl.masterslave][INFO] 2015-12-17 17:44:32,797: atexit

@@ -28,8 +28,8 @@ def run_experiment(num_trials, arduino_pub, baxter_limb, gripper, pub, traj):
     up = [-.967, -.424, .077, 1.423, -.350, -1.157, .116]
 
     for i in range(num_trials):
-      ser.write('1 ' + str(i) + ' ') # trial number
-      rospy.loginfo('sent '+ str(i))
+      ser.write('1 ' + str(1+i) + ' ') # trial number
+      rospy.loginfo('sent '+ str(1+i))
       time.sleep(1)
     
       ser.write('1 200 ')
