@@ -1,0 +1,5 @@
+<launch>
+  <node name="test_timing" pkg="eeg_tests" type="test_timing.py" output="screen"/>
+  <!--<node name="keyboard_input" pkg="eeg_tests" type="keyboard_input.py" output="screen"/>-->
+  <node name="joint_trajectory_action_server" pkg="baxter_interface" type="joint_trajectory_action_server.py" output="screen"/>
+</launch>
