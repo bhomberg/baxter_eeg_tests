@@ -84,10 +84,10 @@ def run_experiment(num_trials, arduino_pub, baxter_limb, gripper, pub, traj):
         # randomly pick correct object and selected object
         correct = random.randint(0,1)
         selected = random.randint(0,1)
-        if correct == 0:
+        if correct == 0: #left
             ser.write('1 201')
             rospy.loginfo('sent 201')
-        else:
+        else: #right
             ser.write('1 202 ')
             rospy.loginfo('sent 202')
         time.sleep(1)
@@ -109,10 +109,16 @@ def run_experiment(num_trials, arduino_pub, baxter_limb, gripper, pub, traj):
 
 
         # set Baxter joint positions
+        # ['s0', 's1', 'e0', 'e1', 'w0', 'w1', 'w2']
         #down = [[-1.19, .41, .28, .48, -.79, -.70, .14], [-.56, .33, .13, .62, .17, -.78, -.25]]
-        down = [[-.86, .22, -.25, .47, -.04, -.59, .20], [-.72, .29, .67, .27, -.08, -.44, -.48]]
-        up = [-.80, .16, .09, .43, -.14, -.61, -.03]
-        wait = [-.75, -.21, -.07, 1.84, .05, -1.57, .04]
+        #down = [[-.86, .22, -.25, .47, -.04, -.59, .20], [-.72, .29, .67, .27, -.08, -.44, -.48]] -.78
+        down = [[-.95, 0, 0, .73, 0, -.94, 0], [-.65, 0, 0, .73, 0, -.94, 0]]
+        #down = [[-.8, -.12, -.08, 1.0, .54, -.94, -.3],  [-.8, -.12, .038, 1.0, -.54, -.94, .3]]
+        #down = [[-.95, .27, -.23, .0, .26, -.15, .10],  [-.65, .27, .23, 0, -.26, -.15, -.10]]
+        #up = [-.80, .16, .09, .43, -.14, -.61, -.03]
+        up = [-.8, .21, 0, .73, 0, -.94, 0]
+        #wait = [-.75, -.21, -.07, 1.84, .05, -1.57, .04]
+        #wait = [-.81, .59, .15, 0, 0, -.635, 0]
 
         print "send baxter to move"
         if selected == 0:
