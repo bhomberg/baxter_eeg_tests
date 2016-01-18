@@ -22,14 +22,14 @@ ser = serial.Serial("/dev/ttyACM2", 9600, timeout=1)
 
 def run_experiment(num_trials, arduino_pub, baxter_limb, gripper, pub, traj):
 
-    ser.write('1 111 ') # need to send 1 before any of the EEG outputs to tell the arduino what type of message it is # send 111 three times to signal start of experiment
-    rospy.loginfo('sent 111')
+    ser.write('1 99 ') # need to send 1 before any of the EEG outputs to tell the arduino what type of message it is # send 111 three times to signal start of experiment
+    rospy.loginfo('sent 99')
     time.sleep(.1)
-    ser.write('1 111 ')
-    rospy.loginfo('sent 111')
+    ser.write('1 99 ')
+    rospy.loginfo('sent 99')
     time.sleep(.1)
-    ser.write('1 111 ')
-    rospy.loginfo('sent 111')
+    ser.write('1 99 ')
+    rospy.loginfo('sent 99')
     time.sleep(.1)
     print "sent 111 three times"
 
