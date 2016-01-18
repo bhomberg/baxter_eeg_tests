@@ -51,20 +51,20 @@ def run_experiment(num_trials, arduino_pub, baxter_limb, gripper, pub, traj):
         ser.write('1 90 ') # indicate start of trial
         rospy.loginfo('sent 90')
         time.sleep(.1)
-        ser.write('1 104 ') # Baxter's task ID
-        rospy.loginfo('sent 104')
+        ser.write('1 107 ') # Baxter's task ID
+        rospy.loginfo('sent 107')
         time.sleep(.1)
-        ser.write('1 161 ') # blocks, each with a different paradigm???
-        rospy.loginfo('sent 161')
+        ser.write('1 6 ') # blocks, each with a different paradigm???
+        rospy.loginfo('sent 6')
         time.sleep(.1)
-        ser.write('1 ' + str(170 + (i%30)) + ' ') # trial number, going 170-199 then repeating
-        rospy.loginfo('sent '+ str(170 + (i%30)))
+        ser.write('1 ' + str(80 + (i%10)) + ' ') # trial number, going 80-89 then repeating
+        rospy.loginfo('sent '+ str(80 + (i%10)))
         time.sleep(.1)
-        ser.write('1 141 ') # training (closed loop should be 142)
-        rospy.loginfo('sent 141')
+        ser.write('1 41 ') # training (closed loop should be 142)
+        rospy.loginfo('sent 41')
         time.sleep(.1)
-        ser.write('1 151 ') # for training, testing should be 152
-        rospy.loginfo('sent 151')
+        ser.write('1 31 ') # for training, testing should be 152
+        rospy.loginfo('sent 31')
         time.sleep(.1)
         ser.write('1 1 ') # inter trial interval
         rospy.loginfo('sent 1')
@@ -85,11 +85,11 @@ def run_experiment(num_trials, arduino_pub, baxter_limb, gripper, pub, traj):
         correct = random.randint(0,1)
         selected = random.randint(0,1)
         if correct == 0: #left
-            ser.write('1 201')
-            rospy.loginfo('sent 201')
+            ser.write('1 111')
+            rospy.loginfo('sent 111')
         else: #right
-            ser.write('1 202 ')
-            rospy.loginfo('sent 202')
+            ser.write('1 112 ')
+            rospy.loginfo('sent 112')
         time.sleep(1)
 
         # set light to go on for one second
@@ -122,18 +122,18 @@ def run_experiment(num_trials, arduino_pub, baxter_limb, gripper, pub, traj):
 
         print "send baxter to move"
         if selected == 0:
-            ser.write('1 221 ') # left target
-            rospy.loginfo('sent 221')
+            ser.write('1 121 ') # left target
+            rospy.loginfo('sent 121')
             time.sleep(.1)
-            ser.write('1 231 ') # left target
-            rospy.loginfo('sent 231')
+            ser.write('1 71 ') # left target
+            rospy.loginfo('sent 71')
             time.sleep(.1)
         else:
-            ser.write('1 222 ') # right target (was 222)
-            rospy.loginfo('sent 222')
+            ser.write('1 122 ') # right target (was 222)
+            rospy.loginfo('sent 122')
             time.sleep(.1)
-            ser.write('1 232 ') # right target (was 232)
-            rospy.loginfo('sent 232')
+            ser.write('1 72 ') # right target (was 232)
+            rospy.loginfo('sent 72')
             time.sleep(.1)
         if correct == selected:
             ser.write('1 25 ') # reward
@@ -153,7 +153,7 @@ def run_experiment(num_trials, arduino_pub, baxter_limb, gripper, pub, traj):
         # have Baxter go to pick up objects
         traj.stop()
         traj.clear('left')
-        traj.add_point(down[selected], 2.0)
+        traj.add_point(down[selected], .5)
         traj.start()
         ser.write('1 51 ')
         rospy.loginfo('sent 51')
