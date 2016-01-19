@@ -18,7 +18,7 @@ from trajectory_msgs.msg import (
 )
 
 # communicates to EEG-reading computer
-ser = serial.Serial("/dev/ttyACM2", 9600, timeout=1)
+ser = serial.Serial("/dev/ttyACM0", 9600, timeout=1)
 
 def run_experiment(num_trials, arduino_pub, baxter_limb, gripper, pub, traj):
 
@@ -153,7 +153,12 @@ def run_experiment(num_trials, arduino_pub, baxter_limb, gripper, pub, traj):
         # have Baxter go to pick up objects
         traj.stop()
         traj.clear('left')
-        traj.add_point(down[selected], .5)
+        if selected ==0:
+           traj.add_point(down[selected], .4)
+        else:
+           traj.add_point(down[selected], .4)
+           
+        #traj.add_point(down[selected], 1) #steph
         traj.start()
         ser.write('1 51 ')
         rospy.loginfo('sent 51')
